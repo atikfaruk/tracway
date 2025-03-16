@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-urbanist;
+  }
+}
+
+@layer utilities {
+  /* ---------- typography ---------- */
+  .heading-01 {
+    @apply text-[64px] laptop:text-[56px] mobile:text-[40px] font-bold tracking-wide leading-tight;
+  }
+
+  .heading-02 {
+    @apply text-3xl mobile:text-2xl font-bold leading-tight tracking-wide text-neutral-600;
+  }
+
+  .heading-03 {
+    @apply text-2xl font-semibold tracking-wide leading-none;
+  }
+
+  .heading-04 {
+    @apply text-lg laptop:text-base font-bold tracking-wide leading-none;
+  }
+
+  .subheading {
+    @apply text-base laptop:text-sm font-medium tracking-wide leading-snug;
+  }
+
+  .label {
+    @apply text-base laptop:text-sm font-semibold tracking-wide leading-none;
+  }
+
+  .caption {
+    @apply text-sm laptop:text-xs font-semibold tracking-wider leading-snug;
+  }
+
+  .paragraph {
+    @apply text-base laptop:text-sm tracking-wide leading-loose;
+  }
+
+  .text-justify-forced {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -hp-pre-wrap;
+    word-wrap: break-word;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+  }
+
+  /* ---------- interface ---------- */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg backdrop-saturate-200;
+  }
+
+  /* ---------- layout ---------- */
+  .content {
+    @apply max-w-[1920px] mx-auto w-full h-fit px-8 laptop:px-6 mobile:px-4;
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-12 gap-8 laptop:gap-6 mobile:gap-4;
+  }
+}
+
+/* ---------- css debugger ---------- */
+/* * {
+  background-color: #00ff0020 !important;
+} */

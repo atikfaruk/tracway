@@ -9,8 +9,12 @@ export default withMT({
 
   theme: {
     fontFamily: {
-      urbanist: ["var(--font-urbanist)", "system-ui", "sans-serif"],
+      sans: ["var(--font-urbanist)", "system-ui", "sans-serif"],
       noto: ["var(--font-noto)", "system-ui", "sans-serif"],
+    },
+
+    container: {
+      center: true,
     },
 
     screens: {
@@ -25,12 +29,8 @@ export default withMT({
       xs: { max: "319px" },
       "min-xs": { min: "320px" },
     },
-    extend: {
-      fontFamily: {
-        sans: ["urbanist", "system-ui", "sans-serif"],
-        heading: ["urbanist", "system-ui", "sans-serif"],
-      },
 
+    extend: {
       colors: {
         black: "#020617",
         primary: {

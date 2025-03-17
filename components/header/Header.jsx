@@ -14,7 +14,7 @@ const Header = () => {
       {/* preloader */}
       <Preloader />
       {/* loader */}
-      <NextTopLoader color="#3b82f6" shadow="0" height={4} showSpinner={false} />
+      <NextTopLoader color="#020617" shadow="0" height={4} showSpinner={false} />
       {/* topbar */}
       <Topbar setMenuOpen={setMenuOpen} />
       {/* menu */}

@@ -8,16 +8,17 @@ import FooterIntro from "./FooterIntro";
 const Footer = () => {
   // footer styles
   const styles = {
-    container: "w-full h-fit content grid-12",
-    content: "col-span-8 col-start-3 tablet:col-span-full grid-12 mobile:gap-6 mb-2",
+    container: "content",
 
-    intro: "col-span-5 mobile:col-span-full mobile:flex mobile:flex-col mobile:items-center",
+    content: "grid grid-cols-12 gap-10 laptop:gap-8 mobile:gap-5",
+    intro: "col-span-5 tablet:col-span-4 mobile:col-span-full mobile:flex mobile:flex-col mobile:items-center",
     services: "col-span-2 mobile:hidden",
     navigation: "col-span-2 mobile:hidden",
-    contact: "col-span-3 mobile:col-span-full mobile:p-4 mobile:rounded-xl mobile:bg-neutral-100",
+    contact: "col-span-3 tablet:col-span-4 mobile:col-span-full",
 
-    legal:
-      "col-span-8 col-start-3 tablet:col-span-full tablet:col-start-1 mobile:flex mobile:flex-col-reverse border-t border-neutral-200 flex justify-between items-center py-6 laptop:py-4 mobile:pt-3 mobile:pb-4",
+    divider: "w-full h-px bg-neutral-200 mt-6 mb-4 laptop:mt-5 laptop:mb-3",
+
+    legal: "mobile:flex mobile:flex-col-reverse flex justify-between items-center mb-4 laptop:mb-3 mobile:mb-5",
     copyright: "caption text-neutral-600",
     terms:
       "inline-block caption text-neutral-600 hover:text-primary transition-colors duration-300 ease-out py-2 laptop:py-1",
@@ -36,6 +37,9 @@ const Footer = () => {
         {/* contact */}
         <FooterLinks variant="external" label="Contact" links={contact} containerStyles={styles.contact} />
       </div>
+
+      {/* divider */}
+      <div className={styles.divider}></div>
 
       {/* legal */}
       <div className={styles.legal}>

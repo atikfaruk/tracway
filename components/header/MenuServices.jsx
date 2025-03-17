@@ -7,13 +7,13 @@ const MenuServices = ({ containerStyles }) => {
   const styles = {
     container: containerStyles,
     label:
-      "label text-neutral-500 border-b border-neutral-200 mobile:border-none pb-4 laptop:pb-2 mobile:pb-0 mb-8 laptop:mb-4",
+      "label text-neutral-600 border-b border-neutral-300 mobile:border-none pb-3 laptop:pb-1 mobile:pb-0 mb-6 laptop:mb-4 mobile:mb-2",
 
-    list: "w-full grid grid-cols-2 mobile:grid-cols-1 gap-4 laptop:gap-2 p-0",
-    item: "group rounded-xl min-mobile:hover:!bg-neutral-100 flex items-center gap-4 laptop:gap-2 p-0 pr-4 laptop:pr-2",
-    icon: "bg-neutral-100 rounded-lg text-2xl laptop:text-xl mobile:text-base text-neutral-500 min-mobile:group-hover:text-primary transition-colors duration-300 ease-out p-8 laptop:p-5 mobile:p-3",
+    list: "w-full min-w-0 grid grid-cols-2 mobile:grid-cols-1 gap-4 laptop:gap-2 mobile:gap-1 p-0",
+    item: "group hover:bg-black/5 flex items-center gap-4 laptop:gap-2 p-0 pr-7 laptop:pr-6 mobile:pr-0",
+    icon: "bg-black/5 rounded-lg text-2xl laptop:text-xl mobile:text-base text-neutral-600 group-hover:text-primary group-hover:bg-black/0 transition-colors duration-300 ease-out p-7 laptop:p-6 mobile:p-3",
     info: "flex flex-col gap-1 laptop:gap-0",
-    title: "heading-04 text-black min-mobile:group-hover:text-primary transition-colors duration-300",
+    title: "heading-04 mobile:!text-sm text-black",
     caption: "caption text-neutral-500 tablet:hidden",
   };
 
@@ -32,9 +32,9 @@ const MenuServices = ({ containerStyles }) => {
               {/* info */}
               <div className={styles.info}>
                 {/* title */}
-                <h4 className={styles.title}>{service.title}</h4>
+                <h5 className={styles.title}>{service.title}</h5>
                 {/* caption */}
-                <h5 className={styles.caption}>{service.caption}</h5>
+                <p className={styles.caption}>{service.caption}</p>
               </div>
             </ListItem>
           </Link>

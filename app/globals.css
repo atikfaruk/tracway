@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-urbanist;
+    @apply bg-white text-black;
   }
 }
 
@@ -23,7 +23,7 @@
   }
 
   .heading-04 {
-    @apply text-lg laptop:text-base font-bold tracking-wide leading-none;
+    @apply text-lg laptop:text-base font-semibold tracking-wide leading-none;
   }
 
   .subheading {
@@ -31,11 +31,11 @@
   }
 
   .label {
-    @apply text-base laptop:text-sm font-semibold tracking-wide leading-none;
+    @apply text-base laptop:text-sm font-semibold normal-case tracking-wider leading-none;
   }
 
   .caption {
-    @apply text-sm laptop:text-xs font-semibold tracking-wider leading-snug;
+    @apply text-sm laptop:text-xs font-semibold normal-case tracking-wider leading-snug;
   }
 
   .paragraph {
@@ -58,22 +58,11 @@
     text-align: justify;
   }
 
-  /* ---------- interface ---------- */
-  .glass {
-    @apply bg-white/80 backdrop-blur-lg backdrop-saturate-200;
-  }
-
   /* ---------- layout ---------- */
   .content {
-    @apply max-w-[1920px] mx-auto w-full h-fit px-8 laptop:px-6 mobile:px-4;
-  }
-
-  .grid-12 {
-    @apply grid grid-cols-12 gap-8 laptop:gap-6 mobile:gap-4;
+    @apply w-full max-w-[1400px] laptop:max-w-[1000px] tablet:max-w-[800px] mx-auto px-10 laptop:px-8 mobile:px-5;
   }
 }
 
 /* ---------- css debugger ---------- */
-/* * {
-  background-color: #00ff0020 !important;
-} */
+/* * { background-color: #00ff0020 !important; } */

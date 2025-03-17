@@ -16,7 +16,7 @@ const Preloader = () => {
 
   // preloader styles
   const styles = {
-    container: "w-full h-full bg-primary fixed inset-0 z-[100] grid place-items-center pb-[2%]",
+    container: "w-full h-full bg-primary fixed inset-0 z-[100] grid place-items-center pb-[2%] mobile:pb-[5%]",
     intro: `h-20 laptop:h-16 mobile:h-14`,
   };
 
@@ -27,7 +27,7 @@ const Preloader = () => {
           initial="open"
           animate="closed"
           exit="closed"
-          transition={{ duration: 0.6, delay: 2.4, ease: "easeInOut" }}
+          transition={{ duration: 0.6, delay: 2, ease: "easeInOut" }}
           variants={variants}
           className={styles.container}
         >

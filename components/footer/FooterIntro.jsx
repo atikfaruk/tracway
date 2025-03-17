@@ -9,8 +9,8 @@ const FooterIntro = ({ containerStyles }) => {
     container: containerStyles,
     logo: "inline-block w-fit h-10 laptop:h-9 mobile:h-8 mb-6 laptop:mb-4",
     slogan: "caption text-neutral-600 mb-8 laptop:mb-6 mobile:hidden",
-    socials: "flex gap-2 items-center",
-    tooltip: "bg-neutral-200 caption text-neutral-600",
+    socials: "flex gap-2 mobile:gap-1 items-center",
+    tooltip: "bg-neutral-100 caption text-neutral-600",
     social: "bg-neutral-100 shadow-none hover:shadow-none rounded-lg text-xl text-neutral-600 hover:text-primary",
   };
 

@@ -7,7 +7,7 @@ import TrendingSection from "@/components/home/TrendingSection";
 
 const Home = () => {
   return (
-    <main>
+    <main className="-mt-[112px] laptop:-mt-[92px] mobile:-mt-[72px]">
       {/* hero section */}
       <HeroSection />
       {/* offer section */}

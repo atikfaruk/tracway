@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Noto_Sans_Bengali, Urbanist } from "next/font/google";
+import Providers from "./providers";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import Providers from "./providers";
 
 // font configs
 const urbanist = Urbanist({

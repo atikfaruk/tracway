@@ -5,20 +5,21 @@ const FooterLinks = ({ variant = "navigation", label, links, containerStyles }) 
   // footer link styles
   const styles = {
     container: containerStyles,
-    label: "block label text-neutral-400 mb-4 laptop:mb-2",
+    label: "block label text-neutral-400 mobile:text-center mb-4 laptop:mb-2",
 
     navigation: {
-      container: "flex flex-col mobile:flex-row mobile:flex-wrap mobile:justify-center mobile:gap-4",
+      container: "flex flex-col",
       link: "inline-block caption text-neutral-600 hover:text-primary transition-colors duration-300 ease-out py-2 laptop:py-1",
     },
 
     external: {
-      container: "flex flex-col",
-      tooltip: "bg-neutral-200 caption text-neutral-600",
-      action: "group flex items-center gap-4 laptop:gap-2 py-1 overflow-x-visible",
-      actionIcon: "label text-neutral-400 min-mobile:group-hover:text-primary transition-colors duration-300 ease-out",
-      actionLabel:
-        "caption text-neutral-600 min-mobile:group-hover:text-primary transition-colors duration-300 ease-out",
+      container: "flex flex-col gap-2 laptop:gap-1",
+      tooltip: "bg-neutral-100 caption text-neutral-600",
+      action:
+        "group mobile:bg-neutral-100 rounded-lg flex items-center gap-2 mobile:gap-0 overflow-x-visible mobile:pr-1",
+      actionIcon:
+        "bg-neutral-100 rounded-lg text-base text-neutral-600 group-hover:text-primary transition-colors duration-300 ease-out p-4 laptop:p-3",
+      actionLabel: "caption text-neutral-600 group-hover:text-primary transition-colors duration-300 ease-out",
     },
   };
 

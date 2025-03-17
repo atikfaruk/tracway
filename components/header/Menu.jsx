@@ -26,7 +26,8 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
     container: "w-full h-full fixed inset-0 z-10 pointer-events-none",
 
     overlay: `
-      w-full h-full bg-white flex flex-col items-center justify-center absolute inset-0 pointer-events-auto transition-all duration-1000 ease-in-out
+      w-full h-full bg-white/90 backdrop-blur backdrop-saturate-200 pointer-events-auto
+      flex flex-col items-center justify-center absolute inset-0 transition-all duration-1000 ease-in-out
       ${
         isFirefox
           ? menuOpen
@@ -39,13 +40,11 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
     `,
 
     menu: {
-      container: "content grid-12",
-      wrapper: "col-span-8 col-start-3 laptop:col-span-full grid-12 laptop:!gap-4 px-2 mobile:px-0",
+      container: "content grid grid-cols-12 gap-10 laptop:gap-x-8 laptop:gap-y-4 mobile:gap-x-1 mobile:gap-y-5",
       services: "col-span-8 mobile:col-span-7",
-      navigation: "col-span-3 col-start-10 mobile:col-span-4 mobile:col-start-9 mobile:mb-4",
-      divider: "col-span-full w-full h-px bg-neutral-200 mobile:hidden",
-      contact: "col-span-8 mobile:col-span-full mobile:p-4 mobile:rounded-xl mobile:bg-neutral-100 mobile:mb-4",
-      socials: "col-span-3 col-start-10 mobile:col-span-full",
+      navigation: "col-span-3 col-start-10 mobile:col-span-5 mobile:col-start-auto",
+      contact: "col-span-8 mobile:col-span-full",
+      socials: "col-span-3 col-start-10 mobile:col-span-full mobile:-mt-4",
     },
   };
 
@@ -61,19 +60,14 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 
         {/* menu */}
         <div className={styles.menu.container}>
-          {/* wrapper */}
-          <div className={styles.menu.wrapper}>
-            {/* services */}
-            <MenuServices containerStyles={styles.menu.services} />
-            {/* navigation */}
-            <MenuNavigation containerStyles={styles.menu.navigation} />
-            {/* divider */}
-            <div className={styles.menu.divider} />
-            {/* contact */}
-            <MenuContact containerStyles={styles.menu.contact} />
-            {/* socials */}
-            <MenuSocials containerStyles={styles.menu.socials} />
-          </div>
+          {/* services */}
+          <MenuServices containerStyles={styles.menu.services} />
+          {/* navigation */}
+          <MenuNavigation containerStyles={styles.menu.navigation} />
+          {/* contact */}
+          <MenuContact containerStyles={styles.menu.contact} />
+          {/* socials */}
+          <MenuSocials containerStyles={styles.menu.socials} />
         </div>
       </div>
     </div>

@@ -6,32 +6,58 @@
   body {
     @apply bg-white text-black;
   }
+
+  /* ---------- prose ---------- */
+  .prose-content {
+    @apply max-w-none prose prose-neutral text-justify-forced text-neutral-800 [&>:first-child]:mt-0 [&>:last-child]:mb-0 
+    prose-p:text-base laptop:prose-p:text-sm prose-p:tracking-wide prose-p:leading-loose 
+    prose-h1:font-bold prose-h1:text-5xl laptop:prose-h1:text-5xl mobile:prose-h1:text-4xl prose-h1:tracking-wide prose-h1:leading-tight 
+    prose-h2:font-bold prose-h2:text-4xl laptop:prose-h2:text-3xl mobile:prose-h2:text-2xl prose-h2:leading-none 
+    prose-h3:font-bold prose-h3:text-2xl laptop:prose-h3:text-xl prose-h3:tracking-wide prose-h3:leading-none 
+    prose-h4:font-semibold prose-h4:text-lg laptop:prose-h4:text-base prose-h4:tracking-wide prose-h4:leading-none 
+    prose-blockquote:text-lg laptop:prose-blockquote:text-base prose-blockquote:font-semibold prose-blockquote:italic prose-blockquote:tracking-wide prose-blockquote:border-l-4 prose-blockquote:pl-4 
+    prose-ul:list-disc prose-ul:list-inside prose-ol:list-decimal prose-ol:list-inside
+    prose-li:text-base laptop:prose-li:text-sm prose-li:leading-relaxed 
+    prose-strong:font-semibold 
+    prose-em:italic 
+    prose-a:text-primary prose-a:hover:text-primary-700
+    prose-img:rounded-xl;
+  }
+
+  /* ---------- scrollbar ---------- */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 hover:bg-neutral-300 rounded-full transition-colors duration-300 ease-out;
+  }
 }
 
 @layer utilities {
   /* ---------- typography ---------- */
   .heading-01 {
-    @apply text-[64px] laptop:text-[56px] mobile:text-[40px] font-bold tracking-wide leading-tight;
+    @apply text-8xl laptop:text-7xl tablet:text-6xl mobile:text-5xl font-medium leading-tight laptop:leading-tight mobile:leading-tight;
   }
 
   .heading-02 {
-    @apply text-3xl mobile:text-2xl font-bold leading-tight tracking-wide text-neutral-600;
+    @apply text-4xl laptop:text-3xl mobile:text-2xl font-semibold mobile:font-bold leading-none;
   }
 
   .heading-03 {
-    @apply text-2xl font-semibold tracking-wide leading-none;
+    @apply text-2xl laptop:text-xl font-bold tracking-wide leading-none;
   }
 
   .heading-04 {
     @apply text-lg laptop:text-base font-semibold tracking-wide leading-none;
   }
 
-  .subheading {
-    @apply text-base laptop:text-sm font-medium tracking-wide leading-snug;
-  }
-
   .label {
-    @apply text-base laptop:text-sm font-semibold normal-case tracking-wider leading-none;
+    @apply text-base laptop:text-sm font-semibold normal-case tracking-wide leading-none;
   }
 
   .caption {
@@ -39,7 +65,7 @@
   }
 
   .paragraph {
-    @apply text-base laptop:text-sm tracking-wide leading-loose;
+    @apply text-base laptop:text-sm font-normal tracking-wide leading-loose laptop:leading-loose;
   }
 
   .text-justify-forced {
@@ -58,9 +84,22 @@
     text-align: justify;
   }
 
+  /* ---------- interface ---------- */
+  .primary-button {
+    @apply shadow-none hover:!shadow-none hover:bg-black/0 hover:text-black border border-black backdrop-blur backdrop-saturate-200 caption !uppercase duration-300;
+  }
+
+  .secondary-button {
+    @apply border-neutral-300 hover:border-black hover:!opacity-100 hover:bg-black backdrop-blur backdrop-saturate-200 hover:text-white label !capitalize flex items-center justify-center duration-300 gap-2;
+  }
+
   /* ---------- layout ---------- */
   .content {
     @apply w-full max-w-[1400px] laptop:max-w-[1000px] tablet:max-w-[800px] mx-auto px-10 laptop:px-8 mobile:px-5;
+  }
+
+  .main {
+    @apply -mt-[112px] laptop:-mt-[92px] mobile:-mt-[72px];
   }
 }
 

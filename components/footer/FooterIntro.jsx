@@ -1,5 +1,5 @@
-import { socials } from "@/data/Socials";
 import { IconButton, Tooltip } from "@/material";
+import { socials } from "@/data/Socials";
 import Image from "next/image";
 import Link from "next/link";
 

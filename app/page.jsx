@@ -4,24 +4,27 @@ import GallerySection from "@/components/home/GallerySection";
 import OfferSection from "@/components/home/OfferSection";
 import PackageSection from "@/components/home/PackageSection";
 import TrendingSection from "@/components/home/TrendingSection";
+import { getGallery, getTourPackages, getTrendingDestinations } from "@/services";
 
-const Home = () => {
+const Home = async () => {
+  const tourPackages = await getTourPackages();
+  const trendingDestinations = await getTrendingDestinations();
+  const gallery = await getGallery();
+
   return (
-    <main className="-mt-[112px] laptop:-mt-[92px] mobile:-mt-[72px]">
+    <main className="main">
       {/* hero section */}
       <HeroSection />
       {/* offer section */}
       <OfferSection />
       {/* package section */}
-      <PackageSection />
+      <PackageSection packages={tourPackages} />
       {/* trending section */}
-      <TrendingSection />
+      <TrendingSection destinations={trendingDestinations} />
       {/* about section */}
       {/* <AboutSection /> */}
       {/* testimonial section */}
       {/* <TestimonialSection /> */}
-      {/* contact section */}
-      {/* <ContactSection /> */}
       {/* blog section */}
       {/* <BlogSection /> */}
       {/* shop section */}
@@ -29,7 +32,7 @@ const Home = () => {
       {/* faq section */}
       <FAQSection />
       {/* gallery section */}
-      <GallerySection />
+      <GallerySection gallery={gallery} />
     </main>
   );
 };

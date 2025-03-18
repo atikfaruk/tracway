@@ -1,96 +1,62 @@
 import Link from "next/link";
 import { Button } from "@/material";
 import PackageCard from "../shared/PackageCard";
+import { BiChevronRight } from "react-icons/bi";
+import CardSlider from "../shared/CardSlider";
 
-const packageList = [
-  {
-    title: "Travel to Paris",
-    slug: "paris-france",
-    cover:
-      "https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    date: "7 Nights / 8 Days",
-    description: {
-      html: "lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    },
-  },
-  {
-    title: "Explore Rome of Italy",
-    slug: "rome-italy",
-    cover:
-      "https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    date: "7 Nights / 8 Days",
-    description: {
-      html: "lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    },
-  },
-  {
-    title: "Discover Barcelona in a new way",
-    slug: "barcelona-spain",
-    cover:
-      "https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    date: "7 Nights / 8 Days",
-    description: {
-      html: "lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    },
-  },
-];
-
-const PackageSection = () => {
+const PackageSection = ({ packages }) => {
   // packages section styles
   const styles = {
-    section: `
-      content grid-12 px-5 mb-28 laptop:mb-24 mobile:mb-20
-    `,
-    wrapper: "col-span-8 col-start-3 tablet:col-span-full",
+    container: "content mb-28 laptop:mb-24 mobile:mb-20 overflow-hidden",
 
     heading: {
-      container: `flex items-center justify-between mobile:justify-center mb-12 laptop:mb-10 mobile:mb-8`,
-      title: `heading-02 mobile:text-center`,
-      action: `mobile:hidden`,
+      container: "flex items-center justify-between mobile:justify-center mb-10 laptop:mb-8 mobile:mb-5",
+      title: "heading-02 mobile:text-center",
+      action: "mobile:hidden secondary-button pl-4 pr-2",
     },
 
-    packages: {
-      container: `grid grid-cols-3 tablet:grid-cols-2 tablet:justify-center mobile:grid-cols-1 gap-x-5 gap-y-11 pt-6`,
-      action: `hidden mobile:block w-full`,
-    },
+    package:
+      "min-w-0 [transform:translate3d(0,_0,_0)] flex-[0_0_33.333%] laptop:flex-[0_0_50%] mobile:flex-[0_0_100%] pl-5",
+
+    action: "hidden mobile:block mobile:mt-5",
+    actionButton: "w-full secondary-button pl-4 pr-2",
   };
 
   return (
-    <section className={styles.section}>
-      <div className={styles.wrapper}>
-        {/* heading */}
-        <div className={styles.heading.container}>
-          {/* title */}
-          <h2 className={styles.heading.title}>Our Packages</h2>
-          {/* action for desktop */}
-          <Link href="/packages">
-            <Button variant="outlined" size="lg" className={styles.heading.action}>
-              View all packages
-            </Button>
-          </Link>
-        </div>
-
-        {/* packages */}
-        <div className={styles.packages.container}>
-          {packageList.map((pack) => (
-            <PackageCard
-              key={pack.slug}
-              cover={pack.cover}
-              title={pack.title}
-              slug={pack.slug}
-              date={pack.date}
-              description={pack.description.html}
-            />
-          ))}
-
-          {/* action for mobile */}
-          <Link href="/packages">
-            <Button variant="outlined" size="lg" className={styles.packages.action}>
-              View all packages
-            </Button>
-          </Link>
-        </div>
+    <section className={styles.container}>
+      {/* heading */}
+      <div className={styles.heading.container}>
+        {/* title */}
+        <h2 className={styles.heading.title}>Our Packages</h2>
+        {/* action for desktop */}
+        <Link href="/packages">
+          <Button variant="outlined" className={styles.heading.action}>
+            Discover all packages <BiChevronRight />
+          </Button>
+        </Link>
       </div>
+
+      {/* packages */}
+      <CardSlider containerStyles="pt-5">
+        {packages.map((pack) => (
+          <PackageCard
+            key={pack.slug}
+            cover={pack.cover.secure_url}
+            title={pack.title}
+            slug={pack.slug}
+            duration={pack.duration}
+            description={pack.description.html}
+            containerStyles={styles.package}
+          />
+        ))}
+      </CardSlider>
+
+      {/* action for mobile */}
+      <Link href="/packages" className={styles.action}>
+        <Button variant="outlined" className={styles.actionButton}>
+          Discover all packages <BiChevronRight />
+        </Button>
+      </Link>
     </section>
   );
 };

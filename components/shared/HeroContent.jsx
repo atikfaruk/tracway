@@ -1,60 +1,65 @@
-import { Fragment } from "react";
-import { services } from "@/data/Services";
+import { services } from "@/data/ServicesList";
 import { List, ListItem } from "@/material";
 import Link from "next/link";
 
 const HeroContent = () => {
+  // hero content styles
   const styles = {
-    container: "w-full h-full bg-black/60 absolute inset-0 z-[1]",
-    content: "content !h-full grid-12 pb-16 laptop:pb-12 mobile:pb-8 pt-8 laptop:pt-6 mobile:pt-4",
-    wrapper: "col-span-8 col-start-3 tablet:col-span-full flex flex-col",
-    heading: "flex-1 flex justify-center items-center heading-01 text-center text-white",
+    container:
+      "w-full aspect-[21/9] tablet:aspect-[16/9] mobile:aspect-[9/16] bg-black/40 backdrop-blur-sm backdrop-saturate-200 relative z-[1]",
+    content: "content w-full h-full flex flex-col pt-10 laptop:pt-8 mobile:pt-5",
 
-    list: "glass flex-row flex-wrap items-center p-1 rounded-xl",
-    link: "flex-1",
-    item: "group w-full rounded-lg shadow-none mobile:border mobile:border-neutral-100 flex items-center justify-center gap-4 laptop:gap-2 py-6 mobile:p-4",
-    icon: "text-2xl laptop:text-xl text-neutral-500 min-mobile:group-hover:text-primary transition-colors duration-300 ease-out",
-    title: "heading-04 text-black min-mobile:group-hover:text-primary transition-colors duration-300 whitespace-nowrap",
+    heading: {
+      container: "flex-1 w-full flex flex-col justify-center gap-6 laptop:gap-4 mobile:gap-2",
+      title:
+        "text-[clamp(0px,_5vw,_96px)] tablet:text-[clamp(52px,_7vw,_68px)] mobile:text-[clamp(28px,_12vw,_92px)] font-semibold leading-tight text-white mobile:text-center",
+      subtitle:
+        "text-3xl laptop:text-2xl mobile:text-base font-semibold tracking-wide leading-normal text-neutral-200 mobile:text-center",
+    },
 
-    bottom: "w-full h-8 laptop:h-6 mobile:h-4 absolute z-10 bg-white bottom-0 rounded-t-[32px]",
+    services: {
+      container: "bg-white/80 backdrop-blur backdrop-saturate-200 rounded-xl grid grid-cols-10 p-1",
+      link: "col-span-2 mobile:col-span-5 mobile:last:col-span-10",
+      item: "group w-full rounded-lg shadow-none border-2 border-white hover:bg-white flex items-center justify-center transition-colors duration-300 ease-out gap-2 py-8 laptop:py-6 mobile:py-5",
+      icon: "text-xl laptop:text-lg text-neutral-500 min-mobile:group-hover:text-primary transition-colors duration-300 ease-out",
+      title: "label text-black min-mobile:group-hover:text-primary transition-colors duration-300 whitespace-nowrap",
+    },
+
+    bottom: "w-full h-10 laptop:h-8 mobile:h-5 rounded-t-[32px] bg-white mt-10 laptop:mt-8 mobile:mt-5",
   };
 
   return (
     <div className={styles.container}>
       {/* content */}
       <div className={styles.content}>
-        {/* wrapper */}
-        <div className={styles.wrapper}>
-          {/* heading */}
-          <div className={styles.heading}>
-            <h1>
-              From Dream to <br /> Destination
-            </h1>
-          </div>
-
-          {/* services */}
-          <List className={styles.list}>
-            {services.map((service, index) => (
-              <Fragment key={index}>
-                <Link key={index} href={service.link} className={styles.link}>
-                  <ListItem className={styles.item}>
-                    {/* icon */}
-                    <span className={styles.icon}>{service.icon}</span>
-                    {/* title */}
-                    <h4 className={styles.title}>{service.title}</h4>
-                  </ListItem>
-                </Link>
-
-                {/* divider */}
-                <div className="w-px h-2/3 bg-neutral-100 last:hidden mobile:hidden" />
-              </Fragment>
-            ))}
-          </List>
+        {/* heading */}
+        <div className={styles.heading.container}>
+          {/* title */}
+          <h1 className={styles.heading.title}>
+            From Dream to <br /> Destination
+          </h1>
+          {/* subtitle */}
+          <h2 className={styles.heading.subtitle}>Find Flights, hotels & more</h2>
         </div>
+
+        {/* services */}
+        <List className={styles.services.container}>
+          {services.map((service, index) => (
+            <Link key={index} href={service.link} className={styles.services.link}>
+              {/* service */}
+              <ListItem className={styles.services.item}>
+                {/* icon */}
+                <span className={styles.services.icon}>{service.icon}</span>
+                {/* title */}
+                <h4 className={styles.services.title}>{service.title}</h4>
+              </ListItem>
+            </Link>
+          ))}
+        </List>
       </div>
 
       {/* bottom */}
-      <div className={styles.bottom} />
+      <div className={styles.bottom}></div>
     </div>
   );
 };

@@ -1,80 +1,102 @@
 export const faqs = [
   {
-    question: "What exactly is the Tracway?",
-    answer: `Tracway is a travel solutions provider that started in Bangladesh and is expanding globally. It offers a range of services, including:
-
-- Flight & Hotel Bookings – Helping customers find the best deals.
-- Visa Assistance – Supporting travelers with visa applications and documentation.
-- Tour Packages – Offering curated travel experiences in different destinations.
-- Document Legalization – Assisting with official paperwork for travel and migration.
-- Work Permits & Study Abroad – Facilitating work visas (Ecuador, Portugal, Serbia, Poland, Croatia) and study opportunities (USA, Hungary, Cyprus).
-
-Tracway is also launching a B2C platform in Bangladesh, similar to Tripadvisor, to help travelers find information, reviews, and recommendations for hotels, restaurants, and experiences. The brand focuses on making travel seamless, stress-free, and professional, connecting Bangladesh with global travel opportunities.`,
-  },
-  {
-    question: "Can I know about Schengen Visa?",
-    answer: `Schengen Visa Processing Timeline: 
-
-At Tracway, we ensure a seamless and efficient Schengen visa application process. Below is the estimated timeline for processing:
-
-- Tracway Processing Time: 10–14 working days (document preparation, verification, and submission)
-- Embassy Processing Time: An additional 12–14 working days.
-
-Please note that processing times may vary depending on the applicant’s profile and the specific embassy requirements. We recommend applying well in advance to avoid any last-minute delays.
-
-Tracway does not guarantee the issuance of a visa. The sole authority to grant or deny a visa rests with the respective embassy or consulate. However, Tracway's experienced team ensures that each application is processed with the highest level of accuracy and professionalism, maximizing the chances of a successful outcome.`,
-  },
-  {
-    question: "What services does Tracway offer?",
-    answer: `Tracway provides seamless travel solutions, including flight booking, hotel reservations, visa assistance, tour packages, and document legalization. We specialize in Schengen Country, Nepal, Malaysia, China, Egypt, and Bangladesh tours, with more destinations coming soon. Let us know how we can assist you!`,
+    question: "What is Tracway?",
+    answer:
+      "<p>Tracway is a <strong>Bangladesh-based travel agency</strong> that offers comprehensive travel solutions, including flight and hotel bookings, international bus and train ticket booking, visa assistance and tour packages.</p>",
   },
   {
     question: "Where is Tracway located?",
-    answer: `Tracway operates from 27 Shaptak Square, Level-7, Dhanmondi-27, Dhaka-1207, Bangladesh, offering global travel solutions. You can contact us online or visit our office for personalized assistance.`,
+    answer:
+      "<p>Tracway is headquartered in <strong>Bangladesh</strong>, serving both local and international travelers through online and in-person services.</p><p><strong>Office Address:</strong></p><ul><li>Flat: 3rd Floor</li><li>House: 5/5</li><li>Block: A</li><li>Lalmatia, Dhaka 1207</li></ul>",
+  },
+  {
+    question: "What services does Tracway provide?",
+    answer:
+      "<ul><li>Flight and hotel bookings</li><li>Visa assistance (Schengen, Europe, South-East Asia, Middle-East, etc.)</li><li>Custom tour packages (domestic & international)</li><li>Hajj & Umrah packages</li><li>Corporate and group travel solutions</li></ul>",
   },
   {
     question: "How can I book a service with Tracway?",
-    answer: `Booking with Tracway is simple! You can:
-
-1. Message us here with your travel details.
-2. Call or WhatsApp us at +8801511945901 
-3. Visit our website: www.tracway.com.bd
-4. Come to our office for in-person assistance.`,
+    answer:
+      "<p>You can book through:</p><ul><li><strong>Website:</strong> Online booking for flights, hotels, busses, and trains</li><li><strong>Phone:</strong> Contact a Tracway representative for tour packages, visa assistance, and other services</li><li><strong>In-Person Visit:</strong> Visit the Tracway office for personalized service</li></ul>",
   },
   {
-    question: "Can I book international flights through Tracway?",
-    answer: `Yes! We offer competitive prices on international and domestic flights. Let us know your destination, travel date, and budget, and we'll find the best options for you.`,
+    question: "What payment methods does Tracway accept?",
+    answer:
+      "<ul><li>Bank transfers</li><li>Mobile banking (bKash/Nagad/Rocket)</li><li>Credit/debit cards</li><li>Cash payments at the office</li></ul>",
   },
   {
-    question: "Do you offer hotel bookings?",
-    answer: `Absolutely! We provide budget-friendly to luxury hotel bookings worldwide. Share your destination and preferences, and we’ll handle the rest.`,
+    question: "Does Tracway offer international travel services?",
+    answer:
+      "<p>Yes, Tracway specializes in <strong>global travel services</strong>, including ticket bookings, visa applications, and personalized tour packages to various destinations.</p>",
   },
   {
-    question: "Does Tracway help with visa applications?",
-    answer: `Yes! We assist with tourist, student, and work permit visas for selected destinations, including Cyprus, Croatia, and Serbia. Let us know your needs, and we’ll guide you through the process.`,
+    question: "What is a Schengen visa?",
+    answer:
+      "<p>A <strong>Schengen visa</strong> allows travelers to visit <strong>27 European countries</strong> in the Schengen Area with a single visa. It is mainly for tourism, business, and family visits.</p>",
   },
   {
-    question: "What documents do I need for a Schengen visa?",
-    answer: `Schengen visa requirements depend on your purpose of travel. Generally, you need:
-
-- A valid passport
-- Recent photographs
-- Bank statements
-- Flight & hotel bookings
-- Other documents based on visa type
-
-Share your details, and we’ll provide a personalized checklist.`,
+    question: "Can Tracway help with Schengen visa applications?",
+    answer:
+      "<p>Yes, Tracway provides <strong>full assistance</strong> for Schengen visas, including document preparation, appointment booking, and travel itinerary planning.</p>",
   },
   {
-    question: "Can you help with document legalization?",
-    answer: `Yes! We provide document legalization services, including attestation and apostille for international travel and work permits. Let us know what documents you need to legalize.`,
+    question: "What other visas does Tracway assist with?",
+    answer:
+      "<ul><li>Schengen visas</li><li>USA, UK, Canada, and Australia visas</li><li>Work and student visas</li><li>Business and tourist visas worldwide</li></ul>",
   },
   {
-    question: "What tour packages does Tracway offer?",
-    answer: `We offer exciting tours in Bangladesh, Nepal, and Cyprus, with more destinations coming soon. Whether you want adventure, culture, or relaxation, we can customize the perfect trip for you.`,
+    question: "How long does it take to process a visa?",
+    answer:
+      "<p>Visa processing times vary by country:</p><ul><li><strong>Schengen visa:</strong> 15–30 days</li><li><strong>USA/UK visa:</strong> Usually 3–6 weeks</li><li><strong>Work & student visas:</strong> Depends on embassy processing times</li></ul>",
   },
   {
-    question: "Can I get a personalized travel itinerary?",
-    answer: `Yes! Our experts create customized travel plans based on your budget, interests, and schedule. Let us know your preferences, and we’ll craft the perfect itinerary.`,
+    question: "Does Tracway guarantee visa approval?",
+    answer:
+      "<p>No travel agency can <strong>guarantee visa approval</strong>. However, Tracway increases your chances by ensuring <strong>proper documentation</strong> and <strong>application accuracy</strong>.</p>",
+  },
+  {
+    question: "Does Tracway offer customized travel packages?",
+    answer:
+      "<p>Yes, Tracway provides <strong>custom travel packages</strong> based on client preferences, including honeymoon, adventure, luxury, and family trips.</p>",
+  },
+  {
+    question: "Are there budget-friendly travel packages?",
+    answer:
+      "<p>Yes, Tracway offers <strong>affordable tour packages</strong> for both domestic and international travel.</p>",
+  },
+  {
+    question: "What destinations does Tracway offer tour packages for?",
+    answer:
+      "<p>Tracway offers tours to <strong>popular destinations</strong> like:</p><ul><li>Maldives</li><li>Thailand</li><li>Dubai</li><li>Turkey</li><li>Malaysia</li><li>Singapore</li><li>Europe</li></ul>",
+  },
+  {
+    question: "Does Tracway provide group tour services?",
+    answer:
+      "<p>Yes, Tracway specializes in <strong>group travel arrangements</strong> for corporate teams, students, and families.</p>",
+  },
+  {
+    question: "Can I cancel or modify my booking?",
+    answer:
+      "<p>Yes, but cancellations and modifications are subject to <strong>airline, hotel, or tour operator policies</strong>. Tracway will assist based on the provider’s terms.</p>",
+  },
+  {
+    question: "Does Tracway offer discounts or promotions?",
+    answer:
+      "<p>Yes, Tracway frequently provides <strong>special discounts</strong> and <strong>seasonal promotions</strong> on flights, hotels, and tour packages.</p>",
+  },
+  {
+    question: "What should I do if I need travel assistance while abroad?",
+    answer:
+      "<p>Tracway offers <strong>24/7 customer support</strong>. Travelers can contact Tracway via <strong>WhatsApp, email, or phone</strong> for assistance.</p>",
+  },
+  {
+    question: "How can I stay updated on Tracway’s latest offers?",
+    answer:
+      "<p>You can stay updated by:</p><ul><li><strong>Following Tracway on social media</strong> (Facebook, Instagram, etc.)</li><li><strong>Subscribing to Tracway’s newsletter</strong> for deals and visa updates</li></ul>",
+  },
+  {
+    question: "Why should I choose Tracway over other travel agencies?",
+    answer:
+      "<p>Tracway provides:</p><ul><li><strong>Reliable visa & travel solutions</strong></li><li><strong>Affordable travel packages</strong></li><li><strong>Personalized customer support</strong></li><li><strong>Hassle-free booking process</strong></li></ul>",
   },
 ];

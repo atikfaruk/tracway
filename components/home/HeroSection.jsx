@@ -1,18 +1,18 @@
 import HeroContent from "../shared/HeroContent";
-import HeroSlider from "../shared/HeroSlider";
+import HeroBg from "../shared/HeroBg";
 
 const HeroSection = () => {
   // hero section styles
   const styles = {
-    section: "w-full aspect-[21/9] tablet:aspect-[16/9] mobile:aspect-[9/16] relative",
+    container: "w-full h-fit relative",
   };
 
   return (
-    <section className={styles.section}>
-      {/* background */}
-      <HeroSlider />
+    <section className={styles.container}>
       {/* content */}
       <HeroContent />
+      {/* background */}
+      <HeroBg />
     </section>
   );
 };

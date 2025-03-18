@@ -1,5 +1,5 @@
 import { navigation } from "@/data/Navigation";
-import { services } from "@/data/Services";
+import { services } from "@/data/ServicesList";
 import { contact } from "@/data/Contact";
 import Link from "next/link";
 import FooterLinks from "./FooterLinks";
@@ -16,9 +16,9 @@ const Footer = () => {
     navigation: "col-span-2 mobile:hidden",
     contact: "col-span-3 tablet:col-span-4 mobile:col-span-full",
 
-    divider: "w-full h-px bg-neutral-200 mt-6 mb-4 laptop:mt-5 laptop:mb-3",
+    divider: "w-full h-px bg-neutral-300 mt-6 mb-4 laptop:mt-5 laptop:mb-3",
 
-    legal: "mobile:flex mobile:flex-col-reverse flex justify-between items-center mb-4 laptop:mb-3 mobile:mb-5",
+    legal: "mobile:flex mobile:flex-col-reverse flex justify-between items-center pb-4 laptop:pb-3 mobile:pb-5",
     copyright: "caption text-neutral-600",
     terms:
       "inline-block caption text-neutral-600 hover:text-primary transition-colors duration-300 ease-out py-2 laptop:py-1",

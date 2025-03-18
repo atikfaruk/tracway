@@ -1,4 +1,4 @@
-import { services } from "@/data/Services";
+import { services } from "@/data/ServicesList";
 import { List, ListItem } from "@/material";
 import Link from "next/link";
 

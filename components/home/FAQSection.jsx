@@ -1,40 +1,53 @@
-"use client";
-
+import Link from "next/link";
+import { BiChevronRight } from "react-icons/bi";
+import { Button } from "@/material";
 import { faqs } from "@/data/FAQs";
-import { Accordion, AccordionBody, AccordionHeader } from "@material-tailwind/react";
-import { useState } from "react";
+import FAQs from "../shared/FAQs";
+import CTA from "../shared/CTA";
 
 const FAQSection = () => {
-  const [open, setOpen] = useState(0);
-
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
-
   // faq section styles
   const styles = {
-    container: "content grid-12 mb-28 laptop:mb-24 mobile:mb-20",
-    content: "col-span-8 col-start-3 tablet:col-span-full",
+    container: "content mb-28 laptop:mb-24 mobile:mb-20",
 
-    heading: `heading-02 mobile:text-center mb-12 laptop:mb-10 mobile:mb-8`,
+    heading: {
+      container: "flex items-center justify-between mobile:justify-center mb-10 laptop:mb-8 mobile:mb-5",
+      title: "heading-02 mobile:text-center",
+      action: "mobile:hidden secondary-button pl-4 pr-2",
+    },
+
+    faqs: "grid grid-cols-2 mobile:grid-cols-1 gap-6 laptop:gap-4 mobile:gap-2 mb-20 laptop:mb-16 mobile:mb-5",
+
+    action: "hidden mobile:block mb-12",
+    actionButton: "w-full secondary-button pl-4 pr-2",
   };
 
   return (
     <section className={styles.container}>
-      {/* content */}
-      <div className={styles.content}>
-        {/* heading */}
-        <h2 className={styles.heading}>Frequently Asked Questions</h2>
-
-        <div className="grid grid-cols-2 gap-8 laptop:gap-6 mobile:gap-4 mobile:grid-cols-1">
-          {faqs.slice(1, 7).map((faq, index) => (
-            <Accordion key={index} open={open === index + 1} className="border-b-neutral-200">
-              <AccordionHeader onClick={() => handleOpen(index + 1)} className="heading-04">
-                {faq.question}
-              </AccordionHeader>
-              <AccordionBody className="paragraph text-neutral-800 text-justify">{faq.answer} </AccordionBody>
-            </Accordion>
-          ))}
-        </div>
+      {/* heading */}
+      <div className={styles.heading.container}>
+        {/* title */}
+        <h2 className={styles.heading.title}>Frequently Asked Questions</h2>
+        {/* action for desktop */}
+        <Link href="/contact/#faq">
+          <Button variant="outlined" className={styles.heading.action}>
+            More Questions <BiChevronRight />
+          </Button>
+        </Link>
       </div>
+
+      {/* content */}
+      <FAQs faqs={faqs.slice(0, 6)} containerStyles={styles.faqs} />
+
+      {/* action for mobile */}
+      <Link href="/contact/#faq" className={styles.action}>
+        <Button variant="outlined" className={styles.actionButton}>
+          More Questions <BiChevronRight />
+        </Button>
+      </Link>
+
+      {/* cta */}
+      <CTA />
     </section>
   );
 };

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/material";
-import { VscMenu } from "react-icons/vsc";
-import { services } from "@/data/Services";
-import { BiChevronDown } from "react-icons/bi";
-import NestedNav from "./NestedNav";
+import { services } from "@/data/ServicesList";
 import { navigation } from "@/data/Navigation";
+import { BiChevronDown } from "react-icons/bi";
+import { VscMenu } from "react-icons/vsc";
+import NestedNav from "./NestedNav";
 
 const Topbar = ({ setMenuOpen }) => {
   // topbar styles
@@ -16,19 +16,19 @@ const Topbar = ({ setMenuOpen }) => {
     left: {
       container: "flex-1 tablet:flex-auto flex items-center justify-start",
       link: "px-4 py-2 mobile:p-3",
-      logo: "w-fit h-8 laptop:h-7 mobile:h-6",
+      logo: "w-fit h-8 laptop:h-7",
     },
 
     center: {
       container: "flex items-center justify-center mobile:hidden",
       item: "flex items-center",
-      link: "h-12 laptop:h-11 label !font-medium flex items-center justify-center gap-0 px-4",
+      link: "h-12 laptop:h-11 label flex items-center justify-center gap-0 px-4",
     },
 
     right: {
       container: "flex-1 tablet:flex-auto flex items-center justify-end",
       button: "h-12 laptop:h-11 mobile:h-12 mobile:w-12 flex items-center justify-center gap-2 px-4 mobile:p-0",
-      label: "label !font-medium mobile:hidden",
+      label: "label mobile:hidden",
       icon: "text-xl",
     },
   };

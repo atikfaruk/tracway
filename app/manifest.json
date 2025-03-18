@@ -1,8 +1,13 @@
 {
-  "name": "Tracway Travel Agency",
+  "name": "Tracway: Book Flight, Hotel, Bus, Train, Tour Packages Online",
   "short_name": "Tracway",
-  "description": "Tracway is a leading travel agency in Bangladesh. We offer the best travel experiences in Bangladesh and abroad.",
+  "description": "Tracway is a travel agency based in Bangladesh providing trusted and hassle-free travel solutions.",
   "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -15,7 +20,7 @@
     }
   ],
   "theme_color": "#3b82f6",
-  "background_color": "#3b82f6",
+  "background_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/"

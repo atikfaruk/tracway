@@ -28,7 +28,7 @@ const MenuNavigation = ({ containerStyles }) => {
               {/* icon */}
               <span className={styles.icon}>{link.icon}</span>
               {/* title */}
-              <hp className={styles.title}>{link.title}</hp>
+              <h5 className={styles.title}>{link.title}</h5>
             </ListItem>
           </Link>
         ))}

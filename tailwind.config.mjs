@@ -13,10 +13,6 @@ export default withMT({
       noto: ["var(--font-noto)", "system-ui", "sans-serif"],
     },
 
-    container: {
-      center: true,
-    },
-
     screens: {
       xl: { max: "1920px" },
       "min-xl": { min: "1921px" },

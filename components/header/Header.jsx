@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Preloader from "./Preloader";
 import NextTopLoader from "nextjs-toploader";
+import Preloader from "./Preloader";
 import Topbar from "./Topbar";
 import Menu from "./Menu";
 

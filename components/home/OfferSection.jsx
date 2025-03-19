@@ -2,7 +2,7 @@ import Image from "next/image";
 import CardSlider from "../shared/CardSlider";
 
 const OfferSection = () => {
-  const offers = ["/schengen-pack.jpg", "/egypt-pack.jpg"];
+  const offers = ["/schengen-pack.jpg", "/egypt-pack.jpg", "/nepal-pack.png"];
 
   // offer section styles
   const styles = {

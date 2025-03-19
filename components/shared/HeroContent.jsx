@@ -5,16 +5,15 @@ import Link from "next/link";
 const HeroContent = () => {
   // hero content styles
   const styles = {
-    container:
-      "w-full aspect-[21/9] tablet:aspect-[16/9] mobile:aspect-[9/16] bg-black/40 backdrop-blur-sm backdrop-saturate-200 relative z-[1]",
+    container: "w-full aspect-[21/9] tablet:aspect-[16/9] mobile:aspect-[9/16] bg-black/60 relative z-[1]",
     content: "content w-full h-full flex flex-col pt-10 laptop:pt-8 mobile:pt-5",
 
     heading: {
-      container: "flex-1 w-full flex flex-col justify-center gap-6 laptop:gap-4 mobile:gap-2",
+      container: "flex-1 w-full flex flex-col justify-center gap-5 laptop:gap-4 mobile:gap-2",
       title:
         "text-[clamp(0px,_5vw,_96px)] tablet:text-[clamp(52px,_7vw,_68px)] mobile:text-[clamp(28px,_12vw,_92px)] font-semibold leading-tight text-white mobile:text-center",
       subtitle:
-        "text-3xl laptop:text-2xl mobile:text-base font-semibold tracking-wide leading-normal text-neutral-200 mobile:text-center",
+        "text-2xl laptop:text-xl mobile:text-base font-semibold tracking-wide leading-normal text-neutral-200 mobile:text-center ml-1 mobile:ml-0",
     },
 
     services: {

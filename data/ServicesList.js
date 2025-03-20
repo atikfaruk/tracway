@@ -4,19 +4,19 @@ import { BiBus, BiHotel } from "react-icons/bi";
 export const services = [
   {
     title: "Flight",
-    link: "#flight",
+    link: "?service=travel",
     icon: <TbPlaneTilt />,
     caption: "Book flight at the best prices from 1000+ airlines",
   },
   {
     title: "Hotel",
-    link: "#hotel",
+    link: "?service=travel",
     icon: <BiHotel />,
     caption: "Reserve hotels from 250k hotels worldwide",
   },
   {
     title: "Bus & Train",
-    link: "#bus-train",
+    link: "#bus",
     icon: <BiBus />,
     caption: "Book bus and train tickets anywhere",
   },

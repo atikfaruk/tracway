@@ -5,6 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 import Preloader from "./Preloader";
 import Topbar from "./Topbar";
 import Menu from "./Menu";
+import TravelBooking from "./TravelBooking";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +20,8 @@ const Header = () => {
       <Topbar setMenuOpen={setMenuOpen} />
       {/* menu */}
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      {/* travel booking  */}
+      <TravelBooking />
     </>
   );
 };

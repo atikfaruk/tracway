@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import NextTopLoader from "nextjs-toploader";
 import Preloader from "./Preloader";
 import Topbar from "./Topbar";
 import Menu from "./Menu";
 import TravelBooking from "./TravelBooking";
+import { Spinner } from "@material-tailwind/react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,15 @@ const Header = () => {
       {/* menu */}
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       {/* travel booking  */}
-      <TravelBooking />
+      <Suspense
+        fallback={
+          <div className="w-full flex justify-center items-center">
+            <Spinner color="blue" />
+          </div>
+        }
+      >
+        <TravelBooking />
+      </Suspense>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { navigation } from "@/data/Navigation";
+import { NavigationList } from "@/data/NavigationList";
 import { List, ListItem } from "@/material";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ const MenuNavigation = ({ containerStyles }) => {
 
       {/* content */}
       <List className={styles.list}>
-        {navigation.map((link, index) => (
+        {NavigationList.map((link, index) => (
           <Link key={index} href={link.link}>
             <ListItem className={styles.item}>
               {/* icon */}

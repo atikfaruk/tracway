@@ -1,4 +1,4 @@
-import { socials } from "@/data/Socials";
+import { SocialList } from "@/data/SocialList";
 import { List, ListItem } from "@/material";
 
 const MenuSocials = ({ containerStyles }) => {
@@ -20,7 +20,7 @@ const MenuSocials = ({ containerStyles }) => {
 
       {/* list */}
       <List className={styles.list}>
-        {socials.map((link, index) => (
+        {SocialList.map((link, index) => (
           <a
             key={index}
             href={link.link}

@@ -1,5 +1,5 @@
 import { IconButton, Tooltip } from "@/material";
-import { socials } from "@/data/Socials";
+import { SocialList } from "@/data/SocialList";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +7,7 @@ const FooterIntro = ({ containerStyles }) => {
   // footer intro styles
   const styles = {
     container: containerStyles,
-    logo: "inline-block w-fit h-10 laptop:h-9 mobile:h-8 mb-6 laptop:mb-4",
+    logo: "inline-block w-fit h-10 laptop:h-9 mobile:h-8 mb-4 laptop:mb-3",
     slogan: "caption text-neutral-600 mb-8 laptop:mb-6 mobile:hidden",
     socials: "flex gap-2 mobile:gap-1 items-center",
     tooltip: "bg-neutral-100 caption text-neutral-600",
@@ -22,13 +22,11 @@ const FooterIntro = ({ containerStyles }) => {
       </Link>
 
       {/* slogan */}
-      <h4 className={styles.slogan}>
-        From Dream to Destination <br /> with Tracway
-      </h4>
+      <h4 className={styles.slogan}>From Dream to Destination</h4>
 
       {/* socials */}
       <ul className={styles.socials}>
-        {socials.map((social, index) => (
+        {SocialList.map((social, index) => (
           <li key={index}>
             <a href={social.link} area-label={`Tracway's ${social.title}`} target="_blank" rel="noopener noreferrer">
               <Tooltip className={styles.tooltip} content={social.title}>

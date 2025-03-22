@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import { Button } from "@/material";
-import { faqs } from "@/data/FAQs";
+import { FaqList } from "@/data/FaqList";
 import FAQs from "../shared/FAQs";
 import CTA from "../shared/CTA";
 
@@ -37,7 +37,7 @@ const FAQSection = () => {
       </div>
 
       {/* content */}
-      <FAQs faqs={faqs.slice(0, 6)} containerStyles={styles.faqs} />
+      <FAQs faqs={FaqList.slice(0, 6)} containerStyles={styles.faqs} />
 
       {/* action for mobile */}
       <Link href="/contact/#faq" className={styles.action}>

@@ -1,4 +1,4 @@
-export const faqs = [
+export const FaqList = [
   {
     question: "What is Tracway?",
     answer:
@@ -92,7 +92,7 @@ export const faqs = [
   {
     question: "How can I stay updated on Tracway’s latest offers?",
     answer:
-      "<p>You can stay updated by:</p><ul><li><strong>Following Tracway on social media</strong> (Facebook, Instagram, etc.)</li><li><strong>Subscribing to Tracway’s newsletter</strong> for deals and visa updates</li></ul>",
+      "<p>You can stay updated by:</p><ul><li><strong>Following Tracway on social media</strong> (Facebook, Instagram, and LinkedIn)</li></ul>",
   },
   {
     question: "Why should I choose Tracway over other travel agencies?",

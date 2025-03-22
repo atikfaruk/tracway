@@ -1,5 +1,5 @@
 import { Tooltip, List, ListItem } from "@/material";
-import { contact } from "@/data/Contact";
+import { ContactList } from "@/data/ContactList";
 
 const MenuContact = ({ containerStyles }) => {
   // menu contact styles
@@ -22,7 +22,7 @@ const MenuContact = ({ containerStyles }) => {
 
       {/* list */}
       <List className={styles.list}>
-        {contact.map((link, index) => (
+        {ContactList.map((link, index) => (
           <Tooltip key={index} placement="top" className={styles.tooltip} content={link.tooltip}>
             <a
               href={link.link}

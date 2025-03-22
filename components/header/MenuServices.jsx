@@ -1,4 +1,4 @@
-import { services } from "@/data/ServicesList";
+import { ServiceList } from "@/data/ServiceList";
 import { List, ListItem } from "@/material";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ const MenuServices = ({ containerStyles }) => {
 
       {/* content */}
       <List className={styles.list}>
-        {services.map((service, index) => (
+        {ServiceList.map((service, index) => (
           <Link key={index} href={service.link}>
             <ListItem className={styles.item}>
               {/* icon */}

@@ -16,7 +16,7 @@ const Home = async () => {
       {/* hero section */}
       <HeroSection />
       {/* offer section */}
-      <OfferSection />
+      {/* <OfferSection /> */}
       {/* package section */}
       <PackageSection packages={tourPackages} />
       {/* trending section */}

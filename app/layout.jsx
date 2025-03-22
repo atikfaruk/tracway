@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Noto_Sans_Bengali, Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import Providers from "./providers";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
@@ -9,13 +9,6 @@ const urbanist = Urbanist({
   display: "swap",
   preload: true,
   variable: "--font-urbanist",
-});
-
-const noto = Noto_Sans_Bengali({
-  subsets: ["bengali", "latin"],
-  display: "swap",
-  preload: true,
-  variable: "--font-noto",
 });
 
 export const metadata = {
@@ -28,7 +21,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en" className={`${urbanist.variable} ${noto.variable}`}>
+    <html lang="en" className={urbanist.variable}>
       <body>
         <Providers>
           <Header />

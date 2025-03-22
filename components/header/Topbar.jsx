@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/material";
-import { services } from "@/data/ServicesList";
-import { navigation } from "@/data/Navigation";
+import { ServiceList } from "@/data/ServiceList";
+import { NavigationList } from "@/data/NavigationList";
 import { BiChevronDown } from "react-icons/bi";
 import { VscMenu } from "react-icons/vsc";
 import NestedNav from "./NestedNav";
@@ -53,12 +53,12 @@ const Topbar = ({ setMenuOpen }) => {
                 Services <BiChevronDown />
               </Button>
             }
-            list={services}
+            list={ServiceList}
             placement="bottom-start"
           />
         </li>
         {/* navigation */}
-        {navigation.slice(1).map((nav, index) => (
+        {NavigationList.slice(1).map((nav, index) => (
           <li key={index} className={styles.center.item}>
             <Link href={nav.link}>
               <Button variant="text" color="white" className={styles.center.link}>

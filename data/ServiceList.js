@@ -1,7 +1,7 @@
-import { TbEPassport, TbPackages, TbPlaneTilt } from "react-icons/tb";
+import { TbEPassport, TbLuggage, TbPackages, TbPlaneTilt } from "react-icons/tb";
 import { BiBus, BiHotel } from "react-icons/bi";
 
-export const services = [
+export const ServiceList = [
   {
     title: "Flight",
     link: "?service=travel",
@@ -18,18 +18,18 @@ export const services = [
     title: "Bus & Train",
     link: "#bus",
     icon: <BiBus />,
-    caption: "Book bus and train tickets anywhere",
+    caption: "Book bus and train tickets anywhere anytime",
   },
   {
     title: "Visa",
     link: "/visa",
     icon: <TbEPassport />,
-    caption: "Get expert assistance for visa",
+    caption: "Get expert assistance for visa applications",
   },
   {
-    title: "Tour Packages",
-    link: "/tour-packages",
-    icon: <TbPackages />,
-    caption: "Explore customized tour packages",
+    title: "Holidays",
+    link: "/holidays",
+    icon: <TbLuggage />,
+    caption: "Explore customized holiday packages",
   },
 ];

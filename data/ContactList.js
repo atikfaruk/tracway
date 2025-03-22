@@ -1,12 +1,12 @@
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 
-export const contact = [
+export const ContactList = [
   {
     title: "Location",
     label: "3rd floor, House 5/5, Block A, Lalmatia, Dhaka 1207",
     icon: <BiMap />,
     tooltip: "Find us on map",
-    link: "https://maps.app.goo.gl/tvbsgRrvtrF3oVJx9",
+    link: "https://maps.app.goo.gl/Hy4nM3xSH1pirR6h6",
   },
   {
     title: "Email",

@@ -10,18 +10,19 @@
   /* ---------- prose ---------- */
   .prose-content {
     @apply max-w-none prose prose-neutral text-justify-forced text-neutral-800 [&>:first-child]:mt-0 [&>:last-child]:mb-0 
-    prose-p:text-base laptop:prose-p:text-sm prose-p:tracking-wide prose-p:leading-loose 
-    prose-h1:font-bold prose-h1:text-5xl laptop:prose-h1:text-5xl mobile:prose-h1:text-4xl prose-h1:tracking-wide prose-h1:leading-tight 
-    prose-h2:font-bold prose-h2:text-4xl laptop:prose-h2:text-3xl mobile:prose-h2:text-2xl prose-h2:leading-none 
-    prose-h3:font-bold prose-h3:text-2xl laptop:prose-h3:text-xl prose-h3:tracking-wide prose-h3:leading-none 
-    prose-h4:font-semibold prose-h4:text-lg laptop:prose-h4:text-base prose-h4:tracking-wide prose-h4:leading-none 
-    prose-blockquote:text-lg laptop:prose-blockquote:text-base prose-blockquote:font-semibold prose-blockquote:italic prose-blockquote:tracking-wide prose-blockquote:border-l-4 prose-blockquote:pl-4 
-    prose-ul:list-disc prose-ul:list-inside prose-ol:list-decimal prose-ol:list-inside
-    prose-li:text-base laptop:prose-li:text-sm prose-li:leading-relaxed 
-    prose-strong:font-semibold 
+    prose-p:text-base laptop:prose-p:text-sm prose-p:font-normal prose-p:tracking-wide prose-p:leading-loose laptop:prose-p:leading-loose
+    prose-h1:text-5xl laptop:prose-h1:text-4xl prose-h1:tracking-wide prose-h1:leading-tight laptop:prose-h1:leading-tight 
+    prose-h2:text-4xl laptop:prose-h2:text-3xl mobile:prose-h2:text-2xl prose-h2:font-semibold mobile:prose-h2:font-bold prose-h2:leading-none laptop:prose-h2:leading-none mobile:prose-h2:leading-none 
+    prose-h3:text-2xl laptop:prose-h3:text-xl prose-h3:font-bold prose-h3:tracking-wide prose-h3:leading-none laptop:prose-h3:leading-none 
+    prose-h4:text-lg laptop:prose-h4:text-base prose-h4:font-semibold prose-h4:tracking-wide prose-h4:leading-none laptop:prose-h4:leading-none
+    prose-h5:text-base laptop:prose-h5:text-sm prose-h5:font-semibold prose-h5:tracking-wide prose-h5:leading-snug laptop:prose-h5:leading-snug
+    prose-blockquote:text-base laptop:prose-blockquote:text-sm prose-blockquote:font-medium prose-blockquote:italic prose-blockquote:tracking-wide prose-blockquote:border-l-4 prose-blockquote:pl-4 
+    prose-ul:list-disc prose-ol:list-decimal
+    prose-li:text-base laptop:prose-li:text-sm prose-li:font-normal prose-li:tracking-wide prose-li:leading-relaxed laptop:prose-li:leading-relaxed prose-li:text-neutral-800
+    prose-strong:font-semibold
     prose-em:italic 
     prose-a:text-primary prose-a:hover:text-primary-700
-    prose-img:rounded-xl;
+    prose-img:rounded-xl prose-img:shadow-xl prose-img:shadow-black/10;
   }
 
   /* ---------- scrollbar ---------- */
@@ -41,27 +42,27 @@
 @layer utilities {
   /* ---------- typography ---------- */
   .heading-01 {
-    @apply text-8xl laptop:text-7xl tablet:text-6xl mobile:text-5xl font-medium leading-tight laptop:leading-tight mobile:leading-tight;
+    @apply text-8xl laptop:text-7xl tablet:text-6xl mobile:text-5xl font-medium leading-tight laptop:leading-tight tablet:leading-tight mobile:leading-tight;
   }
 
   .heading-02 {
-    @apply text-4xl laptop:text-3xl mobile:text-2xl font-semibold mobile:font-bold leading-none;
+    @apply text-4xl laptop:text-3xl mobile:text-2xl font-semibold mobile:font-bold leading-none laptop:leading-none mobile:leading-none;
   }
 
   .heading-03 {
-    @apply text-2xl laptop:text-xl font-bold tracking-wide leading-none;
+    @apply text-2xl laptop:text-xl font-bold tracking-wide leading-none laptop:leading-none;
   }
 
   .heading-04 {
-    @apply text-lg laptop:text-base font-semibold tracking-wide leading-none;
+    @apply text-lg laptop:text-base font-semibold tracking-wide leading-none laptop:leading-none;
   }
 
   .label {
-    @apply text-base laptop:text-sm font-semibold normal-case tracking-wide leading-none;
+    @apply text-base laptop:text-sm font-semibold normal-case tracking-wide leading-none laptop:leading-none;
   }
 
   .caption {
-    @apply text-sm laptop:text-xs font-semibold normal-case tracking-wider leading-snug;
+    @apply text-sm laptop:text-xs font-semibold normal-case tracking-wider leading-snug laptop:leading-snug;
   }
 
   .paragraph {
@@ -90,7 +91,7 @@
   }
 
   .secondary-button {
-    @apply border-neutral-300 hover:border-black hover:!opacity-100 hover:bg-black backdrop-blur backdrop-saturate-200 hover:text-white label !capitalize flex items-center justify-center duration-300 gap-2;
+    @apply border-neutral-300 hover:border-black hover:bg-black hover:!opacity-100 backdrop-blur backdrop-saturate-200 hover:text-white label !capitalize flex items-center justify-center duration-300 gap-2;
   }
 
   /* ---------- layout ---------- */

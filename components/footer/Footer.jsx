@@ -1,6 +1,6 @@
-import { navigation } from "@/data/Navigation";
-import { services } from "@/data/ServicesList";
-import { contact } from "@/data/Contact";
+import { NavigationList } from "@/data/NavigationList";
+import { ServiceList } from "@/data/ServiceList";
+import { ContactList } from "@/data/ContactList";
 import Link from "next/link";
 import FooterLinks from "./FooterLinks";
 import FooterIntro from "./FooterIntro";
@@ -31,11 +31,16 @@ const Footer = () => {
         {/* intro */}
         <FooterIntro containerStyles={styles.intro} />
         {/* services */}
-        <FooterLinks variant="navigation" label="Services" links={services} containerStyles={styles.services} />
+        <FooterLinks variant="navigation" label="Services" links={ServiceList} containerStyles={styles.services} />
         {/* navigation */}
-        <FooterLinks variant="navigation" label="Navigation" links={navigation} containerStyles={styles.navigation} />
+        <FooterLinks
+          variant="navigation"
+          label="Navigation"
+          links={NavigationList}
+          containerStyles={styles.navigation}
+        />
         {/* contact */}
-        <FooterLinks variant="external" label="Contact" links={contact} containerStyles={styles.contact} />
+        <FooterLinks variant="external" label="Contact" links={ContactList} containerStyles={styles.contact} />
       </div>
 
       {/* divider */}

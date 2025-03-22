@@ -10,7 +10,6 @@ export default withMT({
   theme: {
     fontFamily: {
       sans: ["var(--font-urbanist)", "system-ui", "sans-serif"],
-      noto: ["var(--font-noto)", "system-ui", "sans-serif"],
     },
 
     screens: {

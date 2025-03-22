@@ -1,4 +1,4 @@
-import { services } from "@/data/ServicesList";
+import { ServiceList } from "@/data/ServiceList";
 import { List, ListItem } from "@/material";
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ const HeroContent = () => {
 
         {/* services */}
         <List className={styles.services.container}>
-          {services.map((service, index) => (
+          {ServiceList.map((service, index) => (
             <Link key={index} href={service.link} className={styles.services.link}>
               {/* service */}
               <ListItem className={styles.services.item}>

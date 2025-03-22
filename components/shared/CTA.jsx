@@ -9,17 +9,18 @@ const CTA = () => {
     background: "w-full h-full object-cover object-[center_20%]",
     content:
       "w-full aspect-[32/9] mobile:aspect-[16/9] bg-primary/80 backdrop-blur-sm backdrop-saturate-200 flex flex-col justify-center items-center relative p-10 laptop:p-8 mobile:p-5",
-    heading: "heading-02 mobile:!text-[28px] text-white text-center mb-3 laptop:mb-2 mobile:mb-1",
-    subheading: "label !leading-snug text-white text-center mb-8 laptop:mb-6 mobile:mb-5",
-    button: "primary-button !font-bold !border-white hover:!text-white !backdrop-saturate-100 !tracking-wide py-4 px-6",
+    heading: "heading-02 mobile:!text-[28px] text-white text-center mb-3 laptop:mb-2 mobile:mb-1 drop-shadow-xl",
+    subheading: "label !leading-snug text-white text-center mb-8 laptop:mb-6 mobile:mb-5 drop-shadow-xl",
+    button:
+      "primary-button !font-bold !border-white hover:!text-white !backdrop-saturate-100 !tracking-wide py-4 px-6 drop-shadow-xl",
   };
 
   return (
     <div className={styles.container}>
       {/* background */}
       <Image
-        src="/customer-support.jpg"
-        alt="customer support"
+        src="https://res.cloudinary.com/dazc5yfhr/image/upload/v1742216470/pexels-yankrukov-8867265_2_net6zq.jpg"
+        alt="Tracway Customer Support"
         fill
         sizes="(max-width: 767px) 100vw, (max-width: 1023px) 740px, (max-width: 1535px) 940px, 1340px"
         className={styles.background}

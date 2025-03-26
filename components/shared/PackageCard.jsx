@@ -54,7 +54,11 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
           {/* subtitle */}
           <h4 className={styles.body.subtitle}>{duration}</h4>
           {/* description */}
-          <div dangerouslySetInnerHTML={{ __html: description }} className={styles.body.description} />
+          <div
+            dangerouslySetInnerHTML={{ __html: description }}
+            style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+            className={styles.body.description}
+          />
         </CardBody>
 
         {/* footer */}

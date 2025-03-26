@@ -20,7 +20,7 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
       title: "heading-03 text-neutral-800 line-clamp-1 mb-2",
       subtitle: "label mb-3 text-neutral-500",
       description:
-        "paragraph text-justify-forced text-neutral-600 h-[6rem] laptop:h-[5.5rem] overflow-hidden !line-clamp-3",
+        "paragraph text-justify-forced text-neutral-600 h-[6rem] laptop:h-[5.5rem] mobile:h-[5.2rem] overflow-hidden !line-clamp-3",
     },
 
     footer: {

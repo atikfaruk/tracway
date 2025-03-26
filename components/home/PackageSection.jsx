@@ -27,7 +27,7 @@ const PackageSection = ({ packages }) => {
       {/* heading */}
       <div className={styles.heading.container}>
         {/* title */}
-        <h2 className={styles.heading.title}>Holiday Packages</h2>
+        <h2 className={styles.heading.title}>Tour Packages</h2>
         {/* action for desktop */}
         <Link href="/packages">
           <Button variant="outlined" className={styles.heading.action}>

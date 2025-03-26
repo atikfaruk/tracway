@@ -26,8 +26,12 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
     container: "w-full h-full fixed inset-0 z-10 pointer-events-none",
 
     overlay: `
-      w-full h-full bg-white/90 backdrop-blur backdrop-saturate-200 pointer-events-auto
-      flex flex-col items-center justify-center absolute inset-0 transition-all duration-1000 ease-in-out
+      w-full h-full absolute inset-0 transition-colors duration-1000 ease-in-out
+      ${menuOpen ? "bg-black/75" : "bg-black/0"}
+    `,
+
+    content: `
+      w-full h-full bg-white pointer-events-auto flex flex-col items-center justify-center absolute inset-0 transition-all duration-1000 ease-in-out
       ${
         isFirefox
           ? menuOpen
@@ -54,7 +58,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
       <MenuButton scrollY={scrollY} setMenuOpen={setMenuOpen} />
 
       {/* overlay */}
-      <div className={styles.overlay}>
+      <div className={styles.overlay}></div>
+
+      {/* content */}
+      <div className={styles.content}>
         {/* heading */}
         <MenuHeading setMenuOpen={setMenuOpen} />
 

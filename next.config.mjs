@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ap-south-1.graphassets.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
     ],
   },
 };

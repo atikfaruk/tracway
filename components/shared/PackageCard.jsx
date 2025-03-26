@@ -17,9 +17,9 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
 
     body: {
       container: "p-5",
-      title: "heading-03 text-neutral-800 line-clamp-1 mb-2 laptop:mb-1",
+      title: "heading-03 text-neutral-800 line-clamp-1 mb-2",
       subtitle: "label mb-3 text-neutral-500",
-      description: "paragraph text-justify-forced text-neutral-600 !line-clamp-4",
+      description: "paragraph text-justify-forced text-neutral-600 !line-clamp-3",
     },
 
     footer: {
@@ -35,8 +35,15 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
         {/* header */}
         <CardHeader color="black" className={styles.header.container}>
           {/* cover */}
-          <Link href={`/programs/${slug}`}>
-            <Image src={cover} alt={title} width={500} height={300} sizes="100vw" className={styles.header.cover} />
+          <Link href={`/packages/${slug}`}>
+            <Image
+              src={cover}
+              alt={title}
+              width={500}
+              height={300}
+              sizes="(max-width:767px) 95vw, (max-width: 1023px) 324px, (max-width: 1535px) 424px, 390px"
+              className={styles.header.cover}
+            />
           </Link>
         </CardHeader>
 
@@ -53,7 +60,7 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
         {/* footer */}
         <CardFooter className={styles.footer.container}>
           {/* explore button */}
-          <Link href={`/programs/${slug}`}>
+          <Link href={`/packages/${slug}`}>
             <Button className={styles.footer.action}>Explore</Button>
           </Link>
         </CardFooter>

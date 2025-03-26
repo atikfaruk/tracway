@@ -29,6 +29,32 @@ export const getTourPackages = async () => {
   }
 };
 
+// get tour package
+export const getTourPackage = async (slug) => {
+  const query = gql`
+    query GetTourPackage($slug: String!) {
+      tourPackage(where: { slug: $slug }) {
+        cover
+        title
+        duration
+        slug
+        link
+        description {
+          html
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await graphQLClient.request(query, { slug });
+    return response.tourPackage;
+  } catch (error) {
+    console.error("Error fetching tour package:", error);
+    return null;
+  }
+};
+
 // get trending destinations
 export const getTrendingDestinations = async () => {
   const query = gql`

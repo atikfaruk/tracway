@@ -42,7 +42,7 @@
 @layer utilities {
   /* ---------- typography ---------- */
   .heading-01 {
-    @apply text-8xl laptop:text-7xl tablet:text-6xl mobile:text-5xl font-medium leading-tight laptop:leading-tight tablet:leading-tight mobile:leading-tight;
+    @apply text-6xl laptop:text-5xl mobile:text-4xl font-semibold leading-none tracking-wide;
   }
 
   .heading-02 {
@@ -50,7 +50,7 @@
   }
 
   .heading-03 {
-    @apply text-2xl laptop:text-xl font-bold tracking-wide leading-none laptop:leading-none;
+    @apply text-2xl laptop:text-xl font-bold tracking-wide leading-tight laptop:leading-tight;
   }
 
   .heading-04 {

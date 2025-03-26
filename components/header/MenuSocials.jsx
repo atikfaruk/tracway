@@ -5,12 +5,13 @@ const MenuSocials = ({ containerStyles }) => {
   // menu socials styles
   const styles = {
     container: containerStyles,
-    label: "label text-neutral-600 border-b border-neutral-300 pb-3 laptop:pb-1 mb-6 laptop:mb-4 mobile:hidden",
+    label: "label text-neutral-500 border-b border-neutral-300 pb-3 laptop:pb-1 mb-6 laptop:mb-4 mobile:hidden",
 
     list: "w-full min-w-0 flex flex-col gap-2 laptop:gap-1 p-0",
-    item: "group hover:bg-black/5 flex items-center gap-2 p-0 pr-4 laptop:pr-3 mobile:pr-0",
-    icon: "bg-black/5 rounded-lg text-lg mobile:text-base text-neutral-600 group-hover:text-primary group-hover:bg-black/0 transition-colors duration-300 ease-out p-4 laptop:p-3",
-    title: "caption text-neutral-600",
+    link: "inline-flex",
+    item: "group hover:bg-neutral-100 flex items-center gap-2 p-0 pr-4 laptop:pr-3 mobile:pr-0",
+    icon: "bg-neutral-100 rounded-lg text-lg mobile:text-base text-neutral-600 group-hover:text-primary transition-colors duration-300 ease-out p-4 laptop:p-3",
+    title: "caption text-neutral-600 group-hover:text-primary transition-colors duration-300 ease-out",
   };
 
   return (
@@ -27,7 +28,7 @@ const MenuSocials = ({ containerStyles }) => {
             area-label={`Tracway's ${link.title}`}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.action}
+            className={styles.link}
           >
             <ListItem className={styles.item}>
               {/* icon */}

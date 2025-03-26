@@ -19,7 +19,8 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
       container: "p-5",
       title: "heading-03 text-neutral-800 line-clamp-1 mb-2",
       subtitle: "label mb-3 text-neutral-500",
-      description: "paragraph text-justify-forced text-neutral-600 !line-clamp-3",
+      description:
+        "paragraph text-justify-forced text-neutral-600 h-[6rem] laptop:h-[5.5rem] overflow-hidden !line-clamp-3",
     },
 
     footer: {
@@ -54,11 +55,7 @@ const PackageCard = ({ cover, title, slug, duration, description, containerStyle
           {/* subtitle */}
           <h4 className={styles.body.subtitle}>{duration}</h4>
           {/* description */}
-          <div
-            dangerouslySetInnerHTML={{ __html: description }}
-            style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}
-            className={styles.body.description}
-          />
+          <div dangerouslySetInnerHTML={{ __html: description }} className={styles.body.description} />
         </CardBody>
 
         {/* footer */}
